@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+#carousel {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+}
+
+.kitty {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(100%);
+}
+
+.kitty img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kitty.onscreen {
+    transform: translateX(0);
+    transition-duration: 2s;
+}
+
+.kitty.exit {
+    transform: translateX(-100%);
+    transition: transform 2s;
+}
+
+.dot {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border: solid 4px black;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 90%;
+    left: 0;
+}
+
+.dot.filled {
+    background: #ebedef;
+}
